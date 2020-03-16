@@ -164,6 +164,10 @@ function checkPosSlope(row, col) {
   tempCol--
   tempRow++
 
+  while (tempRow <= 5 && tempCol >= 0) {
+    
+  }
+
 
   // bottom left 
  
