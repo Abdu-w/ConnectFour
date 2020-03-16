@@ -203,5 +203,9 @@ function endGame(currPlayer) {
 }
 
 function isWinner(currPlayer, row, col) {
-
+  checkVertical(row, col)
+  checkHorizontal(row, col)
+  checkNegSlope(row, col)
+  checkPosSlope(row, col)
+ 
 }
