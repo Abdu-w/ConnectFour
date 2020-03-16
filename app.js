@@ -233,6 +233,9 @@ function resetGame(){
 
 document.querySelector('.quit').addEventListener('click', event => {
 
- 
+  if(currPlayer === p1){
+    endGame(p2)
+  }
+  
   
 })
