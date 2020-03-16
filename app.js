@@ -154,7 +154,11 @@ function checkPosSlope(row, col) {
   let tempCol = col
 // top  right
 while (tempRow >= 0 && tempCol <= 6) {
-  
+  if (board[tempRow][tempCol] === currPlayer) {
+    posSlopeCounter++
+    console.log(posSlopeCounter)
+  }
+
 }
 
 
