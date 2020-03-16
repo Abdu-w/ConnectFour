@@ -121,4 +121,8 @@ function checkNegSlope(row, col) {
   let tempRow = row
   let tempCol = col
 
+  // Top Left
+  while (tempRow >= 0 && tempCol >= 0) {
+    
+  }
 }
