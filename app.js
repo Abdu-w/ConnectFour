@@ -160,11 +160,11 @@ function checkPosSlope(row, col) {
     }
 
 
-}
+  }
   tempCol--
   tempRow++
 
 
-// bottom left 
+  // bottom left 
  
 }
