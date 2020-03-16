@@ -139,6 +139,10 @@ function checkNegSlope(row, col) {
     tempCol++
     tempRow++
   }
+  if (negSlopeCounter >= 4) {
+    console.log('connect 4 negSlopeCounter', currPlayer, negSlopeCounter)
+   
+  }
 
 
 }
