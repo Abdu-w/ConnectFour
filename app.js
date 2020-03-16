@@ -191,4 +191,6 @@ function endGame(currPlayer) {
   winner.style.color = colors[currPlayer]
   winner.innerText += `\nWinner is Player ${currPlayer}`
 
+  document.querySelector(".nav").style.background = colors[currPlayer]
+ 
   })
