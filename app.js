@@ -1,4 +1,8 @@
 
+
+
+
+
 const cells = document.querySelectorAll('.grid')
 
 cells.forEach(cell => {
@@ -176,5 +180,11 @@ function checkPosSlope(row, col) {
     console.log('connect 4 posSlopeCounter', currPlayer, posSlopeCounter)
   }
 
-  
+
 }
+
+
+function endGame(currPlayer) {
+  console.log('Game ends!')
+
+  })
