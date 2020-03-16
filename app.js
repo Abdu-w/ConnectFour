@@ -146,3 +146,10 @@ function checkNegSlope(row, col) {
 
 
 }
+
+
+function checkPosSlope(row, col) {
+ 
+
+ 
+}
