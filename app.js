@@ -152,12 +152,13 @@ function checkPosSlope(row, col) {
   let posSlopeCounter = 0
   let tempRow = row
   let tempCol = col
-// top  right
-while (tempRow >= 0 && tempCol <= 6) {
-  if (board[tempRow][tempCol] === currPlayer) {
-    posSlopeCounter++
-    console.log(posSlopeCounter)
-  }
+  // top  right
+  while (tempRow >= 0 && tempCol <= 6) {
+    if (board[tempRow][tempCol] === currPlayer) {
+      posSlopeCounter++
+      console.log(posSlopeCounter)
+    }
+
 
 }
 
