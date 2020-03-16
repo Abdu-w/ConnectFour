@@ -28,38 +28,42 @@ const board = [
   [null, null, null, null, null, null, null]  // row 5
   ]
 
-  function checkBottomLayer(elemId) {
-    const [row, col] = elemId.split(',')
-    for (let i = 5; i >= 0; i--) {
-      // from the last row and moving upwards
-      let step = board[i][col] // current step in that col
-      // if step is null, change null to the player's position
-      if (step === null) {
-        
-        if (switchTurn === false) {
-          board[i][col] = p1
-        } else {
-          board[i][col] = p2
-        }
-        // console.log('current postion', i, col)
-      }
-    }
-    // console.log(board)
-  }
 
-  function writeToBoard(row, col) {
-    const elem = document.getElementById(row + ',' + col)
-    
-    if (switchTurn === false) {
-      currPlayer = p1
-    } else {
-      currPlayer = p2
-    }
-    elem.style.background = colors[currPlayer]
-    
-    if (switchTurn === false) {
-      switchTurn = true
-    } else {
-      switchTurn = false
+function writeToBoard(row, col) {
+  const elem = document.getElementById(row + ',' + col)
+  
+  if (switchTurn === false) {
+    currPlayer = p1
+  } else {
+    currPlayer = p2
+  }
+  elem.style.background = colors[currPlayer]
+  
+  if (switchTurn === false) {
+    switchTurn = true
+  } else {
+    switchTurn = false
+  }
+}
+
+
+function checkBottomLayer(elemId) {
+  const [row, col] = elemId.split(',')
+  for (let i = 5; i >= 0; i--) {
+    // from the last row and moving upwards
+    let step = board[i][col] // current step in that col
+    // if step is null, change null to the player's position
+    if (step === null) {
+      
+      if (switchTurn === false) {
+        board[i][col] = p1
+      } else {
+        board[i][col] = p2
+      }
+      // console.log('current postion', i, col)
+      writeToBoard(i, col)
+      break
     }
   }
+  // console.log(board)
+}
