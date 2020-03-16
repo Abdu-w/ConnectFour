@@ -90,3 +90,12 @@ function checkVertical(row, col) {
   vCounter = 0
   
 }
+
+function checkHorizontal(row, col) {
+  let hCounter = 0 
+  
+  for(let i = col; i >= 0; i--) {
+    console.log(hCounter)
+   
+  }
+}
