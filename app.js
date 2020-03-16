@@ -223,3 +223,5 @@ function draw(row,col){
     endGame(draw)
   }
 }
+
+const reset = document.querySelector(".reset")
