@@ -132,7 +132,9 @@ function checkNegSlope(row, col) {
   // Bottom Right
   tempRow = row
   tempCol = col
+  while (tempRow <= 5 && tempCol <= 6) {
+   
+  }
 
 
-  
 }
