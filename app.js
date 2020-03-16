@@ -114,3 +114,9 @@ function checkHorizontal(row, col) {
 
   hCounter = 0
 }
+
+
+function checkNegSlope(row, col) {
+  let negSlopeCounter = 0
+  
+}
