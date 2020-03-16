@@ -67,3 +67,19 @@ function checkBottomLayer(elemId) {
   }
   // console.log(board)
 }
+
+
+function checkVertical(row, col) {
+  let vCounter = 0
+
+  // test for  the top 
+  for(let i = row; i >= 0; i--) {
+    console.log(vCounter)
+  
+  }
+  // test to the bottom 
+  for(let i = row; i <= 5; i++) {
+    console.log(vCounter)
+  }
+
+  
