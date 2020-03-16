@@ -83,6 +83,10 @@ function checkVertical(row, col) {
     if(board[i][col] === currPlayer) vCounter++
     else break
   }
+  if (vCounter >= 4) {
+    console.log('connect 4 vertically', currPlayer)
+  }
 
+  vCounter = 0
   
 }
