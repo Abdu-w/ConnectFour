@@ -117,7 +117,7 @@ function checkHorizontal(row, col) {
 
 // testing negative slope
 function checkNegSlope(row, col) {
-  let negSlopeCounter = 0
+  let negSlopeCounter = -1
   let tempRow = row
   let tempCol = col
   
