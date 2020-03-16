@@ -211,5 +211,8 @@ function isWinner(currPlayer, row, col) {
 }
 
 function draw(row,col){
- 
+  dCount = 0
+  for(let i = 0; i<= 6; i++){
+  
+  }
 }
