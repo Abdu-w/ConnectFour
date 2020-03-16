@@ -93,9 +93,14 @@ function checkVertical(row, col) {
 
 function checkHorizontal(row, col) {
   let hCounter = 0 
-  
+
   for(let i = col; i >= 0; i--) {
     console.log(hCounter)
    
+  }
+
+  for(let i = col; i <= 6; i++) {
+    console.log(hCounter)
+
   }
 }
