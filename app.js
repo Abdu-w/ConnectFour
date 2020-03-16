@@ -169,7 +169,8 @@ function checkPosSlope(row, col) {
       posSlopeCounter++
       console.log(posSlopeCounter)
     }
-    
+    tempCol--
+    tempRow++
   }
 
 
