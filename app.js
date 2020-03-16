@@ -209,6 +209,7 @@ function isWinner(currPlayer, row, col) {
   checkPosSlope(row, col)
  
 }
+const full = "Draw"
 
 function draw(row,col){
   dCount = 0
@@ -218,6 +219,6 @@ function draw(row,col){
     }
   }
   if(dCount >= 6){
-    e
+    endGame(draw)
   }
 }
