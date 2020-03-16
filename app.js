@@ -1,10 +1,7 @@
 
-
-
-
+const reset = document.querySelector(".reset")
 
 const cells = document.querySelectorAll('.grid')
-
 cells.forEach(cell => {
   cell.addEventListener('click', elem => {
     checkBottomLayer(elem.target.id) 
@@ -17,21 +14,19 @@ const colors = {
   player1: 'orangered',
   player2: 'skyblue'
 }
-
 let switchTurn = false
 let currPlayer = p1
 
 const board = [
   /* 
-    0      1      2     3     4     5      6    (cols) */
+   0      1      2     3     4     5      6    (cols) */
   [null, null, null, null, null, null, null], // row 0
   [null, null, null, null, null, null, null], // row 1
   [null, null, null, null, null, null, null], // row 2
   [null, null, null, null, null, null, null], // row 3
   [null, null, null, null, null, null, null], // row 4
-  [null, null, null, null, null, null, null]  // row 5
-  ]
-
+  [null, null, null, null, null, null, null] // row 5
+]
 
 function writeToBoard(row, col) {
   const elem = document.getElementById(row + ',' + col)
@@ -42,6 +37,7 @@ function writeToBoard(row, col) {
     currPlayer = p2
   }
   elem.style.background = colors[currPlayer]
+  isWinner(currPlayer, row, col)
   
   if (switchTurn === false) {
     switchTurn = true
@@ -72,6 +68,14 @@ function checkBottomLayer(elemId) {
   // console.log(board)
 }
 
+function isWinner(currPlayer, row, col) {
+  checkVertical(row, col)
+  checkHorizontal(row, col)
+  checkNegSlope(row, col)
+  checkPosSlope(row, col)
+  draw(row, col)
+}
+
 function checkVertical(row, col) {
   let vCounter = -1
 
@@ -87,45 +91,78 @@ function checkVertical(row, col) {
     if(board[i][col] === currPlayer) vCounter++
     else break
   }
+
+  
+
   if (vCounter >= 4) {
     console.log('connect 4 vertically', currPlayer)
+    endGame(currPlayer)
   }
 
   vCounter = 0
-  
 }
 
 function checkHorizontal(row, col) {
   let hCounter = -1
 
+  
   for(let i = col; i >= 0; i--) {
     console.log(hCounter)
     if(board[row][i] === currPlayer) hCounter++
     else break
-   
   }
-
+  
   for(let i = col; i <= 6; i++) {
     console.log(hCounter)
     if(board[row][i] === currPlayer) hCounter++
     else break
+  }
 
-    if (hCounter >= 4) {
-      console.log('connect 4 horizontally', currPlayer)
-
-    }
+  if (hCounter >= 4) {
+    console.log('connect 4 horizontally', currPlayer)
+    endGame(currPlayer)
   }
 
   hCounter = 0
 }
 
-// testing negative slope
+function checkPosSlope(row, col) {
+  let posSlopeCounter = -1
+  let tempRow = row
+  let tempCol = col
+
+  // TR
+  while (tempRow >= 0 && tempCol <= 6) {
+    if (board[tempRow][tempCol] === currPlayer) {
+      posSlopeCounter++
+    }
+    tempCol++
+    tempRow--
+  }
+
+  tempRow = row
+  tempCol = col
+  // BL
+  while (tempRow <= 5 && tempCol >= 0) {
+    if (board[tempRow][tempCol] === currPlayer) {
+      posSlopeCounter++
+    }
+    tempCol--
+    tempRow++
+  }
+
+  if (posSlopeCounter >= 4) {
+    console.log('connect 4 posSlopeCounter', currPlayer, posSlopeCounter)
+    endGame(currPlayer)
+  }
+}
+
 function checkNegSlope(row, col) {
   let negSlopeCounter = -1
   let tempRow = row
   let tempCol = col
-  
-  // Top Left
+
+  // TL
   while (tempRow >= 0 && tempCol >= 0) {
     if (board[tempRow][tempCol] === currPlayer) {
       negSlopeCounter++
@@ -133,9 +170,10 @@ function checkNegSlope(row, col) {
     tempCol--
     tempRow--
   }
-  // Bottom Right
+
   tempRow = row
   tempCol = col
+  // BR
   while (tempRow <= 5 && tempCol <= 6) {
     if (board[tempRow][tempCol] === currPlayer) {
       negSlopeCounter++
@@ -143,44 +181,11 @@ function checkNegSlope(row, col) {
     tempCol++
     tempRow++
   }
+
   if (negSlopeCounter >= 4) {
     console.log('connect 4 negSlopeCounter', currPlayer, negSlopeCounter)
-   
+    endGame(currPlayer)
   }
-
-
-}
-
-
-function checkPosSlope(row, col) {
-  let posSlopeCounter = -1
-  let tempRow = row
-  let tempCol = col
-  // top  right
-  while (tempRow >= 0 && tempCol <= 6) {
-    if (board[tempRow][tempCol] === currPlayer) {
-      posSlopeCounter++
-      console.log(posSlopeCounter)
-    }
-
-
-  }
-  tempCol--
-  tempRow++
-   // bottom left 
-  while (tempRow <= 5 && tempCol >= 0) {
-    if (board[tempRow][tempCol] === currPlayer) {
-      posSlopeCounter++
-      console.log(posSlopeCounter)
-    }
-    tempCol--
-    tempRow++
-  }
-  if (posSlopeCounter >= 4) {
-    console.log('connect 4 posSlopeCounter', currPlayer, posSlopeCounter)
-  }
-
-
 }
 
 
@@ -198,18 +203,21 @@ function endGame(currPlayer) {
       
     },false)
   })
+  
+  
 
 
+  // reset the board
+  // for (let i = 0; i < board.length; i++) {
+  //   for (let j = 0; j < board[i].length; j++) {
+  //     board[i][j] = null
+  //   }
+  // }
+
+   
+  // reset the winner`
 }
 
-function isWinner(currPlayer, row, col) {
-  checkVertical(row, col)
-  checkHorizontal(row, col)
-  checkNegSlope(row, col)
-  checkPosSlope(row, col)
-  draw(row, col)
- 
-}
 const full = "Draw"
 
 function draw(row,col){
@@ -224,13 +232,6 @@ function draw(row,col){
   }
 }
 
-const reset = document.querySelector(".reset")
-function resetGame(){
-  window.location.reload();
-} 
-
-
-
 document.querySelector('.quit').addEventListener('click', event => {
 
   if(currPlayer === p1){
@@ -241,3 +242,11 @@ document.querySelector('.quit').addEventListener('click', event => {
   }
   
 })
+ 
+
+
+
+function resetGame(){
+  window.location.reload();
+} 
+
