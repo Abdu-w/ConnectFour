@@ -75,6 +75,8 @@ function checkVertical(row, col) {
   // test for  the top 
   for(let i = row; i >= 0; i--) {
     console.log(vCounter)
+    if(board[i][col] === currPlayer) vCounter++
+    else break
   
   }
   // test to the bottom 
