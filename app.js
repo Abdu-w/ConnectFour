@@ -198,14 +198,10 @@ function endGame(currPlayer) {
 
   document.querySelector(".nav").style.background = colors[currPlayer]
   /////
-  cells.forEach(cell => {
-    cell.removeEventListener('click', elem => {
-      
-    },false)
-  })
-  
-  
 
+   cell.removeEventListener('click', e => {
+      
+  })
 
   // reset the board
   // for (let i = 0; i < board.length; i++) {
@@ -221,7 +217,7 @@ function endGame(currPlayer) {
 const full = "Draw"
 
 function draw(row,col){
-  dCount = 0
+  dCount = 1
   for(let i = 0; i<= 6; i++){
     if(board[0][i] != null){
       dCount++
@@ -232,7 +228,7 @@ function draw(row,col){
   }
 }
 
-document.querySelector('.quit').addEventListener('click', event => {
+document.querySelector('.quit').addEventListener('click', currPlayer => {
 
   if(currPlayer === p1){
     endGame(p2)
