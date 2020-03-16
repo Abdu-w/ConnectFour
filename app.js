@@ -225,3 +225,6 @@ function draw(row,col){
 }
 
 const reset = document.querySelector(".reset")
+function resetGame(){
+  window.location.reload();
+} 
