@@ -149,7 +149,9 @@ function checkNegSlope(row, col) {
 
 
 function checkPosSlope(row, col) {
- 
+  let posSlopeCounter = 0
+  let tempRow = row
+  let tempCol = col
 
  
 }
