@@ -192,5 +192,9 @@ function endGame(currPlayer) {
   winner.innerText += `\nWinner is Player ${currPlayer}`
 
   document.querySelector(".nav").style.background = colors[currPlayer]
- 
+  /////
+  cells.forEach(cell => {
+    cell.removeEventListener('click', elem => {
+      
+    },false)
   })
