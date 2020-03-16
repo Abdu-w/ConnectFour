@@ -153,9 +153,12 @@ function checkPosSlope(row, col) {
   let tempRow = row
   let tempCol = col
 // top  right
+while (tempRow >= 0 && tempCol <= 6) {
+  
+}
 
 
 
-
+// bottom left 
  
 }
