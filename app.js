@@ -133,7 +133,10 @@ function checkNegSlope(row, col) {
   tempRow = row
   tempCol = col
   while (tempRow <= 5 && tempCol <= 6) {
-   
+    if (board[tempRow][tempCol] === currPlayer) {
+      negSlopeCounter++
+    }
+    
   }
 
 
