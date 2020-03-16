@@ -186,5 +186,6 @@ function checkPosSlope(row, col) {
 
 function endGame(currPlayer) {
   console.log('Game ends!')
-
+  // show who won: currPlayer
+ 
   })
