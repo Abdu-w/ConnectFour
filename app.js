@@ -163,7 +163,7 @@ function checkPosSlope(row, col) {
   }
   tempCol--
   tempRow++
-
+   // bottom left 
   while (tempRow <= 5 && tempCol >= 0) {
     if (board[tempRow][tempCol] === currPlayer) {
       posSlopeCounter++
@@ -173,7 +173,4 @@ function checkPosSlope(row, col) {
     tempRow++
   }
 
-
-  // bottom left 
- 
 }
