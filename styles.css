@@ -15,3 +15,12 @@
     
   }
   
+.grid {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin: 6px;
+    background-color: papayawhip;
+    text-align: center;
+}
+  
