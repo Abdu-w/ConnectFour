@@ -103,6 +103,8 @@ function checkHorizontal(row, col) {
 
   for(let i = col; i <= 6; i++) {
     console.log(hCounter)
+    if(board[row][i] === currPlayer) hCounter++
+    else break
 
   }
 }
