@@ -201,3 +201,7 @@ function endGame(currPlayer) {
 
 
 }
+
+function isWinner(currPlayer, row, col) {
+
+}
