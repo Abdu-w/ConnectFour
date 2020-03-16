@@ -228,3 +228,11 @@ const reset = document.querySelector(".reset")
 function resetGame(){
   window.location.reload();
 } 
+
+
+
+document.querySelector('.quit').addEventListener('click', event => {
+
+ 
+  
+})
