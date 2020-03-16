@@ -198,3 +198,4 @@ function endGame(currPlayer) {
       
     },false)
   })
+}
