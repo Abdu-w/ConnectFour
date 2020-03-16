@@ -217,7 +217,7 @@ function endGame(currPlayer) {
 const full = "Draw"
 
 function draw(row,col){
-  dCount = 1
+  dCount = -1
   for(let i = 0; i<= 6; i++){
     if(board[0][i] != null){
       dCount++
