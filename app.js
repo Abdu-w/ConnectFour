@@ -200,6 +200,15 @@ function endGame(currPlayer) {
   })
 
   //  reset the board
+   reset the board
+  for (let i = 0; i < board.length; i++) {
+    for (let j = 0; j < board[i].length; j++) {
+      board[i][j] = null
+    }
+  }
+
+   
+  // reset the winner`
  
    
   // reset the winner`
