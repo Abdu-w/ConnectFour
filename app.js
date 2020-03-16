@@ -129,4 +129,10 @@ function checkNegSlope(row, col) {
     tempCol--
     tempRow--
   }
+  // Bottom Right
+  tempRow = row
+  tempCol = col
+
+
+  
 }
