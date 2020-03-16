@@ -16,3 +16,5 @@ const colors = {
 
 let switchTurn = false
 let currPlayer = p1
+
+const board = [] // need a refrence board 7X6
