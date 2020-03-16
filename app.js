@@ -198,4 +198,9 @@ function endGame(currPlayer) {
       
     },false)
   })
+
+  //  reset the board
+ 
+   
+  // reset the winner`
 }
