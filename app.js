@@ -206,9 +206,6 @@ function endGame(currPlayer) {
       board[i][j] = null
     }
   }
-
-   
-  // reset the winner`
  
    
   // reset the winner`
