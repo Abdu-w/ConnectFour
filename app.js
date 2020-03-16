@@ -13,3 +13,6 @@ const colors = {
   player1: 'orangered',
   player2: 'skyblue'
 }
+
+let switchTurn = false
+let currPlayer = p1
