@@ -209,3 +209,7 @@ function isWinner(currPlayer, row, col) {
   checkPosSlope(row, col)
  
 }
+
+function draw(row,col){
+ 
+}
