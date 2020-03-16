@@ -120,9 +120,12 @@ function checkNegSlope(row, col) {
   let negSlopeCounter = 0
   let tempRow = row
   let tempCol = col
-
+  
   // Top Left
   while (tempRow >= 0 && tempCol >= 0) {
+    if (board[tempRow][tempCol] === currPlayer) {
+      negSlopeCounter++
+    }
     
   }
 }
