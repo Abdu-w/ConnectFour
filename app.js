@@ -46,3 +46,20 @@ const board = [
     }
     // console.log(board)
   }
+
+  function writeToBoard(row, col) {
+    const elem = document.getElementById(row + ',' + col)
+    
+    if (switchTurn === false) {
+      currPlayer = p1
+    } else {
+      currPlayer = p2
+    }
+    elem.style.background = colors[currPlayer]
+    
+    if (switchTurn === false) {
+      switchTurn = true
+    } else {
+      switchTurn = false
+    }
+  }
