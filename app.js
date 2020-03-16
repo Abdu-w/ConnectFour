@@ -108,8 +108,11 @@ function checkHorizontal(row, col) {
 
     if (hCounter >= 4) {
       console.log('connect 4 horizontally', currPlayer)
+
     }
   
 
   }
+
+  hCounter = 0
 }
