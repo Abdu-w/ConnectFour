@@ -126,6 +126,7 @@ function checkNegSlope(row, col) {
     if (board[tempRow][tempCol] === currPlayer) {
       negSlopeCounter++
     }
-    
+    tempCol--
+    tempRow--
   }
 }
