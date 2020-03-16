@@ -172,5 +172,9 @@ function checkPosSlope(row, col) {
     tempCol--
     tempRow++
   }
+  if (posSlopeCounter >= 4) {
+    console.log('connect 4 posSlopeCounter', currPlayer, posSlopeCounter)
+  }
 
+  
 }
