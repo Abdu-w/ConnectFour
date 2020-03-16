@@ -27,3 +27,22 @@ const board = [
   [null, null, null, null, null, null, null], // row 4
   [null, null, null, null, null, null, null]  // row 5
   ]
+
+  function checkBottomLayer(elemId) {
+    const [row, col] = elemId.split(',')
+    for (let i = 5; i >= 0; i--) {
+      // from the last row and moving upwards
+      let step = board[i][col] // current step in that col
+      // if step is null, change null to the player's position
+      if (step === null) {
+        
+        if (switchTurn === false) {
+          board[i][col] = p1
+        } else {
+          board[i][col] = p2
+        }
+        // console.log('current postion', i, col)
+      }
+    }
+    // console.log(board)
+  }
