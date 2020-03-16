@@ -152,6 +152,10 @@ function checkPosSlope(row, col) {
   let posSlopeCounter = 0
   let tempRow = row
   let tempCol = col
+// top  right
+
+
+
 
  
 }
