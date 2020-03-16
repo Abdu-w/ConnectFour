@@ -207,6 +207,7 @@ function isWinner(currPlayer, row, col) {
   checkHorizontal(row, col)
   checkNegSlope(row, col)
   checkPosSlope(row, col)
+  draw(row, col)
  
 }
 const full = "Draw"
