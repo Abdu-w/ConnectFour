@@ -82,6 +82,8 @@ function checkVertical(row, col) {
   // test to the bottom 
   for(let i = row; i <= 5; i++) {
     console.log(vCounter)
+    if(board[i][col] === currPlayer) vCounter++
+    else break
   }
 
   
