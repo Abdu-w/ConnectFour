@@ -213,6 +213,11 @@ function isWinner(currPlayer, row, col) {
 function draw(row,col){
   dCount = 0
   for(let i = 0; i<= 6; i++){
-  
+    if(board[0][i] != null){
+      dCount++
+    }
+  }
+  if(dCount >= 6){
+    e
   }
 }
