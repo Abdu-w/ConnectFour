@@ -106,5 +106,10 @@ function checkHorizontal(row, col) {
     if(board[row][i] === currPlayer) hCounter++
     else break
 
+    if (hCounter >= 4) {
+      console.log('connect 4 horizontally', currPlayer)
+    }
+  
+
   }
 }
