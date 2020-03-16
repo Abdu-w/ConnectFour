@@ -4,3 +4,14 @@
     align-items: center;
   }
   
+  .container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    background-color: rgb(230, 195, 40);
+    padding: 10px;
+    border-radius:8%;
+    box-shadow: 7px 7px 4px 5px #888888;
+    
+  }
+  
