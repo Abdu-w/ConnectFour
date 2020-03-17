@@ -1,11 +1,13 @@
 
 const reset = document.querySelector(".reset")
 
+function addClickEvent(elem) {
+  checkBottomLayer(elem.target.id) 
+}
+
 const cells = document.querySelectorAll('.grid')
 cells.forEach(cell => {
-  cell.addEventListener('click', elem => {
-    checkBottomLayer(elem.target.id) 
-  })
+  cell.addEventListener('click', addClickEvent)
 })
 
 const p1 = 'player1' // red
@@ -129,7 +131,7 @@ function checkHorizontal(row, col) {
 function checkPosSlope(row, col) {
   let posSlopeCounter = -1
   let tempRow = row
-  let tempCol = col
+  let tempCol = col 
 
   // TR
   while (tempRow >= 0 && tempCol <= 6) {
@@ -197,12 +199,10 @@ function endGame(currPlayer) {
   winner.innerText += `\nWinner is Player ${currPlayer}`
 
   document.querySelector(".nav").style.background = colors[currPlayer]
-  /////
-
-   cell.removeEventListener('click', e => {
-      
+ 
+  cells.forEach(cell => {
+    cell.removeEventListener('click', addClickEvent)
   })
-
   // reset the board
   // for (let i = 0; i < board.length; i++) {
   //   for (let j = 0; j < board[i].length; j++) {
