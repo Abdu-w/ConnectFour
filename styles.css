@@ -11,7 +11,7 @@
     background-color: rgb(230, 195, 40);
     padding: 10px;
     border-radius:8%;
-    box-shadow: 7px 7px 4px 5px #888888;
+    box-shadow:5px 15px 30px 10px rgba(0,0,0,0.2);
     background-image: linear-gradient(rgb(250, 234, 12), rgb(255, 230, 0), rgb(243, 228, 11));
     
   }
