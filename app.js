@@ -206,6 +206,8 @@ function endGame(currPlayer) {
   cells.forEach(cell => {
     cell.removeEventListener('click', addClickEvent)
   })
+
+  quitG.removeEventListener('click', quitGame)
   
 }
 
