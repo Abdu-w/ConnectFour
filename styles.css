@@ -12,6 +12,7 @@
     padding: 10px;
     border-radius:8%;
     box-shadow: 7px 7px 4px 5px #888888;
+    background-image: linear-gradient(rgb(250, 234, 12), rgb(255, 230, 0), rgb(243, 228, 11));
     
   }
   
