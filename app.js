@@ -203,15 +203,7 @@ function endGame(currPlayer) {
   cells.forEach(cell => {
     cell.removeEventListener('click', addClickEvent)
   })
-  // reset the board
-  // for (let i = 0; i < board.length; i++) {
-  //   for (let j = 0; j < board[i].length; j++) {
-  //     board[i][j] = null
-  //   }
-  // }
-
-   
-  // reset the winner`
+  
 }
 
 const full = "Draw"
@@ -228,7 +220,8 @@ function draw(row,col){
   }
 }
 
-document.querySelector('.quit').addEventListener('click', currPlayer => {
+
+ document.querySelector('.quit').addEventListener('click', currPlayer => {
 
   if(currPlayer === p1){
     endGame(p2)
@@ -237,8 +230,8 @@ document.querySelector('.quit').addEventListener('click', currPlayer => {
     endGame(p1)
   }
   
-})
- 
+})  
+
 
 
 
