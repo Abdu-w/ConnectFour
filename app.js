@@ -1,14 +1,17 @@
 
 const reset = document.querySelector(".reset")
 
-function addClickEvent(elem) {
-  checkBottomLayer(elem.target.id) 
-}
 
 const cells = document.querySelectorAll('.grid')
 cells.forEach(cell => {
   cell.addEventListener('click', addClickEvent)
 })
+
+function addClickEvent(elem) {
+  checkBottomLayer(elem.target.id) 
+}
+
+
 
 const p1 = 'player1' // red
 const p2 = 'player2' // blue
@@ -221,15 +224,15 @@ function draw(row,col){
 }
 
 
- document.querySelector('.quit').addEventListener('click', currPlayer => {
+ document.querySelector('.quit').addEventListener('click', player  => {
 
   if(currPlayer === p1){
     endGame(p2)
   }
-  else{
-    endGame(p1)
+ 
+  else if(currPlayer === p2){
+   endGame(p1)
   }
-  
 })  
 
 
@@ -238,4 +241,3 @@ function draw(row,col){
 function resetGame(){
   window.location.reload();
 } 
-
