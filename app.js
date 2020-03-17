@@ -237,7 +237,7 @@ function draw(row,col){
     endGame(p2)
   }
  
-  else if(currPlayer === p2){
+  if(currPlayer === p2){
    endGame(p1)
   }
 } 
