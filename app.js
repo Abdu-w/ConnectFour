@@ -224,7 +224,12 @@ function draw(row,col){
 }
 
 
- document.querySelector('.quit').addEventListener('click', player  => {
+
+ const quitG = document.querySelector('.quit')
+ 
+ quitG.addEventListener('click', quitGame)
+ 
+ function quitGame(player) {
 
   if(currPlayer === p1){
     endGame(p2)
@@ -233,7 +238,7 @@ function draw(row,col){
   else if(currPlayer === p2){
    endGame(p1)
   }
-})  
+} 
 
 
 
